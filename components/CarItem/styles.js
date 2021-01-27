@@ -18,11 +18,19 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 40,
-    fontWeight: 500,
+    fontWeight: "500",
   },
-  subTitle: {
+  tagline: {
     fontSize: 16,
     color: "#5c5e62",
+  },
+  taglineCTA: {
+    textDecorationLine: "underline",
+  },
+  styleButtonContainer: {
+    position: "absolute",
+    bottom: 50,
+    width: "100%",
   },
 });
 
