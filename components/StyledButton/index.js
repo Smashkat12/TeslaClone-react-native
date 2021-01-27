@@ -2,23 +2,21 @@ import React from "react";
 import { View, Text, Pressable } from "react-native";
 import styles from "./styles";
 
-const StyledButton = ({ type }) => {
+const StyledButton = ({ type, content, onPress }) => {
   /* handle dynamic styling of button background */
-  const backgroundColor = type === "primary" ? "black" : "white";
+  const backgroundColor = type === "primary" ? "#171A20CC" : "#FFFFFFA6";
 
   /* handle dynamic styling of button text */
 
-  const textColor = type === "primary" ? "white" : "black";
+  const textColor = type === "primary" ? "#FFF" : "#171A20";
 
   return (
     <View style={styles.container}>
       <Pressable
         style={[styles.button, { backgroundColor: backgroundColor }]}
-        onPress={() => {
-          console.warn("hey there 😃");
-        }}
+        onPress={onPress}
       >
-        <Text style={[styles.text, { color: textColor }]}>Custom Order</Text>
+        <Text style={[styles.text, { color: textColor }]}>{content}</Text>
       </Pressable>
     </View>
   );
